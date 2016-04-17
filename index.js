@@ -46,6 +46,9 @@ function respond(question) {
     case 'Can\'t login again':
       answer = 'Hi Vitaly,\n\nI\'ve re-enabled your account.\n\nWe\'ll try to get something set up on our end this week so you don\'t get disabled in the next one.\n\nRegards,\nAdrian'
       break;
+    case 'I can\'t reset my password':
+      answer = 'Hi Lili,\n\nI\'ve reset your password to:\nchangeme\n\nLet us know if there is anything else we can help with.\n\nRegards,\nAdrian'
+      break;      
     case 'I can\'t see any shifts available':
       answer = 'Hi Melisa,\n\nIt seems like you were not set up on the correct Bayada office.\n\nCould you please tell me which office you are from?\n\nRegards,\nAdrian'
       break;
