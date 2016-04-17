@@ -31,7 +31,12 @@ app.post('/facebook', function(req, res) {
     sender = event.sender.id;
     if (event.message && event.message.text) {
       text = event.message.text;
-      sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
+      if (text == 'What time is it?') {
+        var currentdate = new Date(); 
+        sendTextMessage(sender, "It's " + currentdate.getHours() + " and " currentdate.getMinutes());
+      } else {
+        sendTextMessage(sender, "No clue, sorry!");        
+      }
     }
   }
   res.sendStatus(200);
