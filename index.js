@@ -30,17 +30,28 @@ app.post('/facebook', function(req, res) {
     event = req.body.entry[0].messaging[i];
     sender = event.sender.id;
     if (event.message && event.message.text) {
-      text = event.message.text;
-      if (text == 'What time is it?') {
-        var currentdate = new Date(); 
-        sendTextMessage(sender, 'It\'s ' + currentdate.getHours() + ':' + currentdate.getMinutes());
-      } else {
-        sendTextMessage(sender, "No clue, sorry!");        
-      }
+      question = event.message.text;
+      sendTextMessage(sender, respond(question));
     }
   }
   res.sendStatus(200);
 });
+
+function respond(question) {
+  switch (question) {
+    case 'What time is it?':
+      var currentdate = new Date(); 
+      var currentdate = new Date(); 
+      answer = 'It\'s ' + currentdate.getHours() + ':' + currentdate.getMinutes();      
+      break;
+    case: 'Can\'t login again':
+      answer = 'Hi Vitaly,\n\n I\'ve re-enabled your account.\n\n We\'ll try to get something set up on our end this week so you don\'t get disabled in the next one.\n\n Regards, Adrian'
+      break;
+    default:
+      answer = 'No clue, sorry!'; 
+  }
+  return answer;
+}
 
 app.post('/instagram', function(req, res) {
   console.log('Instagram request body:');
