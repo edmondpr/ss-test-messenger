@@ -44,7 +44,10 @@ function respond(question) {
       answer = 'It\'s ' + currentdate.getHours() + ':' + currentdate.getMinutes();      
       break;
     case 'Can\'t login again':
-      answer = 'Hi Vitaly,\n\n I\'ve re-enabled your account.\n\n We\'ll try to get something set up on our end this week so you don\'t get disabled in the next one.\n\n Regards, Adrian'
+      answer = 'Hi Vitaly,\n\nI\'ve re-enabled your account.\n\nWe\'ll try to get something set up on our end this week so you don\'t get disabled in the next one.\n\nRegards,\nAdrian'
+      break;
+    case 'I can\'t see any shifts available':
+      answer = 'Hi Melisa,\n\nIt seems like you were not set up on the correct Bayada office.\n\nCould you please tell me which office you are from?\n\nRegards,\nAdrian'
       break;
     default:
       answer = 'No clue, sorry!'; 
