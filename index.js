@@ -39,12 +39,12 @@ app.post('/facebook', function(req, res) {
 
 function respond(question) {
   switch (question) {
-    case 'What time is it?':
+    case 'What time is it?'
       var currentdate = new Date(); 
       var currentdate = new Date(); 
       answer = 'It\'s ' + currentdate.getHours() + ':' + currentdate.getMinutes();      
       break;
-    case: 'Can\'t login again':
+    case 'Can\'t login again':
       answer = 'Hi Vitaly,\n\n I\'ve re-enabled your account.\n\n We\'ll try to get something set up on our end this week so you don\'t get disabled in the next one.\n\n Regards, Adrian'
       break;
     default:
