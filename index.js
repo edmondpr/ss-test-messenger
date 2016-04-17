@@ -39,8 +39,7 @@ app.post('/facebook', function(req, res) {
 
 function respond(question) {
   switch (question) {
-    case 'What time is it?'
-      var currentdate = new Date(); 
+    case 'What time is it?':
       var currentdate = new Date(); 
       answer = 'It\'s ' + currentdate.getHours() + ':' + currentdate.getMinutes();      
       break;
