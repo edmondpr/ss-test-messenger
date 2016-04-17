@@ -33,7 +33,7 @@ app.post('/facebook', function(req, res) {
       text = event.message.text;
       if (text == 'What time is it?') {
         var currentdate = new Date(); 
-        sendTextMessage(sender, currentdate.getHours() + ' and ' + currentdate.getMinutes());
+        sendTextMessage(sender, currentdate.getHours() + ' hours and ' + currentdate.getMinutes() + ' minutes');
       } else {
         sendTextMessage(sender, "No clue, sorry!");        
       }
