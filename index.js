@@ -32,8 +32,8 @@ app.post('/facebook', function(req, res) {
     if (event.message && event.message.text) {
       text = event.message.text;
       if (text == 'What time is it?') {
-        //var currentdate = new Date(); 
-        sendTextMessage(sender, new Date());
+        var currentdate = new Date(); 
+        sendTextMessage(sender, currentdate);
       } else {
         sendTextMessage(sender, "No clue, sorry!");        
       }
